@@ -94,15 +94,17 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
   end
 
   def play
-    until over? == true
-      turn
+    while over? == false
+    	turn
     end
-  if draw? == true
-    puts "Cats Game!"
-  else won?
-    puts "Congratulations #{winner}!"
-  end
 
-  end
+    if draw?
+    	puts "Cat's Game!"
+    elsif winner == "X" 
+    	puts "Congratulations X!"
+    elsif winner == "O"
+    	puts "Congratulations O!"
+    end
+end
 
 end
