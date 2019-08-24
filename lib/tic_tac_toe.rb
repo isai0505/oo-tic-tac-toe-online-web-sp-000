@@ -105,6 +105,6 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
     elsif winner == "O"
     	puts "Congratulations O!"
     end
-end
+  end
 
 end
