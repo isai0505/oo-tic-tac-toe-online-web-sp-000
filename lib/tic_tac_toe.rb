@@ -102,7 +102,7 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
   else won?(board)
     puts "Congratulations #{winner(board)}!"
   end
-    
+
   end
-  
+
 end
