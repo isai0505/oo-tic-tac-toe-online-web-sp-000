@@ -94,11 +94,9 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
   end
 
   def play
-    counter = 0
-    until counter == 9
-      turn
-      counter +=1
-    end
+  counter = 0
+  turn.each do |counter|
+  end
   end
 
 
