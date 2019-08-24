@@ -73,4 +73,11 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
     end
   end
 
+  def full?
+    board.all? do |position|
+      position == "X" || position == "O"
+    end
+  end
+
+
 end
