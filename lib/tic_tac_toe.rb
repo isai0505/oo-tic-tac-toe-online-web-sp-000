@@ -81,6 +81,7 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
 
   def draw?
     !won? && full?
+  end
 
 
 end
