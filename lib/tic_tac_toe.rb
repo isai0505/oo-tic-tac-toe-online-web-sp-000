@@ -97,6 +97,12 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
     until over? == true
       turn
     end
+  if draw?(board) == true
+    puts "Cats Game!"
+  else won?(board)
+    puts "Congratulations #{winner(board)}!"
   end
-
+    
+  end
+  
 end
