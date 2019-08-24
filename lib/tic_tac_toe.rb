@@ -100,7 +100,7 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
 
     if draw?
     	puts "Cat's Game!"
-    elsif winner == "X" 
+    elsif winner == "X"
     	puts "Congratulations X!"
     elsif winner == "O"
     	puts "Congratulations O!"
