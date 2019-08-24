@@ -83,5 +83,9 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
     !won? && full?
   end
 
+  def over?
+    won? || draw?
+  end
+
 
 end
