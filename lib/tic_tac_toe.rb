@@ -93,9 +93,9 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
     end
   end
 
-  def play(board)
-    until over?(board) == true
-  turn(board)
+  def play
+    until over? == true
+      turn
   end
 
 
