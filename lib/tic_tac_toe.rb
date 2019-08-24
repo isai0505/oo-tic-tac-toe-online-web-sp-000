@@ -49,7 +49,7 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
     count
   end
 
-  def current_player(board)
+  def current_player
     turn_count.even? ? "X" : "O"
   end
 
