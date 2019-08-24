@@ -95,7 +95,7 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
 
   def play
   counter = 0
-  turn.each do |counter|
+  turn(board).each do |counter|
   end
   end
 
