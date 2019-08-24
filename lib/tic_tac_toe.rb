@@ -87,5 +87,11 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
     won? || draw?
   end
 
+  def winner
+    if won?
+      @board[won?[0]]
+    end
+  end
+
 
 end
