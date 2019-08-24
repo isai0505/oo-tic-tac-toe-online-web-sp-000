@@ -65,6 +65,11 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
   end
   end
 
-  
+  def won?
+    WIN_COMBINATIONS.detect do |combo|
+      position_taken?(board, combo[0]) &&
+      board[combo[0]] == board[combo[1]] &&
+      board[combo[0]] == board[combo[2]]
+  end
 
 end
