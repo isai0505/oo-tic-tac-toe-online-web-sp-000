@@ -27,8 +27,42 @@ return " #{@board[0]} | #{@board[1]} | #{@board[2]} \n-----------\n
       return index = input.to_i - 1
   end
 
-  def move(board, input, value)
-    board[input] = value
+  def move(index, token)
+    @board[index] = token
+  end
+
+  def position_taken?(index)
+  !(@board[index].nil? || @board[index] == " ")
+  end
+
+  def valid_move?(index)
+    index.between?(0,8) && !position_taken?(index)
+  end
+
+  def turn_count
+    count = 0
+    @board.each do |play|
+      if play == "X" || play == "O"
+        count += 1
+      end
+    end
+    count
+  end
+
+  def current_player
+    turn_count.even? ? "X" : "O"
+  end
+
+  def turn
+    puts "Please enter 1-9:"
+    user_input= gets.strip
+    index = input_to_index(user_input)
+  if  valid_move?(@board, index)
+    move(@board, index, char= current_player(@board))
+    display_board(@board)
+  else
+    turn(@board)
+  end
   end
 
 end
